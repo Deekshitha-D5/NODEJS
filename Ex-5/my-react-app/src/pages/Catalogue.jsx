@@ -5,11 +5,11 @@ import catalogue from '../assets/images/catalogue.jpg';
 
 function Catalogue() {
   const [products] = useState([
-    { name: 'Product-1', product_name: 'Describe of product 1' },
-    { name: 'Product-2', product_name: 'Describe of product 2' },
-    { name: 'Product-3', product_name: 'Describe of product 3' },
-    { name: 'Product-4', product_name: 'Describe of product 4' },
-    { name: 'Product-5', product_name: 'Describe of product 5' }
+    { name: 'Product-1', product_name: 'Describe of product 1', image: catalogue },
+    { name: 'Product-2', product_name: 'Describe of product 2', image: catalogue },
+    { name: 'Product-3', product_name: 'Describe of product 3', image: catalogue },
+    { name: 'Product-4', product_name: 'Describe of product 4', image: catalogue },
+    { name: 'Product-5', product_name: 'Describe of product 5', image: catalogue }
   ]);
 
   return (
@@ -20,7 +20,7 @@ function Catalogue() {
             <div className="col-lg-3 col-md-6 col-12" key={index}>
               <div className="card product-card overflow-hidden h-100">
                 <div className="card-img">
-                  <img src={catalogue} alt="Book" className="img-fluid" />
+                  <img src={product.image} alt={product.name} className="img-fluid" loading="lazy" />
                 </div>
                 <div className="card-body d-flex flex-column">
                   <h4>{product.name}</h4>
